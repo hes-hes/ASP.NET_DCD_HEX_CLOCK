@@ -1,0 +1,99 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@{
+
+    string parse_digit_display(string digit){
+        
+        switch (digit){
+            
+            case "1":
+                return "1.png";
+            
+            case "2":
+                return "2.png";
+            
+            case "3":
+                return "3.png";
+            
+            case "4":
+                return "4.png";
+
+            case "5":
+                return "5.png";
+            
+            case "6":
+                return "6.png";
+            
+            case "7":
+                return "7.png";
+            
+            case "8":
+                return "8.png";
+
+            case "9":
+                return "9.png";
+            
+            default:
+                return "0.png";          
+        }
+
+    }
+
+    var time = DateTime.Now.ToString("HH:mm");
+    var date = DateTime.Now;
+
+    string[] timeParts = time.Split(':');
+
+    var hour_decimal = timeParts[0].Substring(0,1);
+    var hour_unit = timeParts[0].Substring(1,1);
+    var minute_decimal = timeParts[1].Substring(0,1);
+    var minute_unit = timeParts[1].Substring(1,1);
+
+    var hour_decimal_display = parse_digit_display(hour_decimal);
+    var hour_unit_display = parse_digit_display(hour_unit);
+    var minute_decimal_display = parse_digit_display(minute_decimal);
+    var minute_unit_display = parse_digit_display(minute_unit); 
+            
+}
+
+
+<div class="row_margin">
+    
+    <h2>
+        @date
+    </h2>
+
+</div>
+
+<div class="row">
+    
+    <div class="column_big">
+        <img id="hour_uni" class="digit" src= "~/images/@hour_decimal_display">
+    </div>
+
+    <div class="column_big">
+        <img id="hour_uni" class="digit" src="~/images/@hour_unit_display">    
+    </div>
+
+    <div class="column_big">
+        <img id="hour_uni" class="digit" src="~/images/dots.png">    
+    </div>
+
+    <div class="column_big">
+        <img id="hour_uni" class="digit" src="~/images/@minute_decimal_display">    
+    </div>
+
+    <div class="column_big">
+        <img id="hour_uni" class="digit" src="~/images/@minute_unit_display">    
+    </div>
+
+    
+</div>
+
+<div class="row_margin">
+            
+</div>
