@@ -1,4 +1,4 @@
-# VERY SIMPLE 7 SEGMENTS DISPLAY WATCH
+# VERY SIMPLE 7-SEGMENT DISPLAY CLOCK
 
 <p align="center">
   <img src="sample.png" style="vertical-align: middle">
